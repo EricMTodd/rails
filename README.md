@@ -1,1 +1,1 @@
-# Agile Wev Development With Rails 6
+# Agile Web Development With Rails 6
