@@ -1,0 +1,9 @@
+<h1>Welcome to the Sandbox</h1>
+<p>Addition: <%= @addition %></p>
+<p>Concatenation: <%= @concat %></p>
+<p>Time in one hour: <%= @time_in_one_hour %></p>
+<% @files.each do |file| %>
+<ul>
+  file name is: <%= file %>
+</ul>
+<% end %>
