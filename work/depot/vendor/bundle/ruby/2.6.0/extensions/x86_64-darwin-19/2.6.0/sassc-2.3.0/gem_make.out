@@ -1,5 +1,5 @@
 current directory: /Users/ericmtodd/coding/replicant_program/rails/work/depot/vendor/bundle/ruby/2.6.0/gems/sassc-2.3.0/ext
-/Users/ericmtodd/.rbenv/versions/2.6.5/bin/ruby -I /Users/ericmtodd/.rbenv/versions/2.6.5/lib/ruby/2.6.0 -r ./siteconf20200420-12928-qvnl4l.rb extconf.rb
+/Users/ericmtodd/.rbenv/versions/2.6.5/bin/ruby -I /Users/ericmtodd/.rbenv/versions/2.6.5/lib/ruby/2.6.0 -r ./siteconf20200423-70334-82dch4.rb extconf.rb
 creating Makefile
 
 current directory: /Users/ericmtodd/coding/replicant_program/rails/work/depot/vendor/bundle/ruby/2.6.0/gems/sassc-2.3.0/ext
@@ -79,4 +79,4 @@ linking shared-object sassc/libsass.bundle
 
 current directory: /Users/ericmtodd/coding/replicant_program/rails/work/depot/vendor/bundle/ruby/2.6.0/gems/sassc-2.3.0/ext
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 libsass.bundle ./.gem.20200420-12928-16r9uvk/sassc
+/usr/bin/install -c -m 0755 libsass.bundle ./.gem.20200423-70334-1h7rlwy/sassc

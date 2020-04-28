@@ -11,29 +11,29 @@ class ProductTest < ActiveSupport::TestCase
     assert product.errors[:image_url].any?
   end
 
-  test "Product price must be positive" do
+  test "product price must be positive" do
     product = Product.new(
       title: "Meditations",
       description: "The personal journal of Marcus Aurelius",
-      image_url: "marcus_aurelius.jpg"
+      image_url: "marcus.jpg"
     )
-    product.price = -1
+    product.price = - 1
     assert product.invalid?
-    assert_equal ["must be greater than or equal to 0.01"],
+    assert_equal ["must be greaterthan or equal to 0.01"],
       product.errors[:price]
-
-      product.price = 0
-      assert product.invalid?
-      assert_equal ["must be greater than or equal to 0.01"],
-        product.errors[:price]
-
+  
+    product.price = 0
+    assert product.invalid?
+    assert_equal ["must be greaterthan or equal to 0.01"],
+      product.errors[:price]
+  
     product.price = 1
     assert product.valid?
   end
 
   def new_product(image_url)
-    product = Product.new(
-      title: "Meditations",
+    Product.new(
+      title: "Meditations 2",
       description: "The personal journal of Marcus Aurelius",
       price: 1,
       image_url: image_url
@@ -45,51 +45,25 @@ class ProductTest < ActiveSupport::TestCase
     bad = %w{ fred.doc fred.gif/more fred.gif.more }
 
     ok.each do |image_url|
-      assert new_product(image_url).valid?,
-      "#{image_url} shouldn't be invalid."
-    
+      assert new_product(image_url).valid?, "#{image_url} shouldn't be valid"
     end
 
     bad.each do |image_url|
-      assert new_product(image_url).invalid?,
-      "#{image_url} shouldn't be valid."
+      assert new_product(image_url).invalid?, "#{image_url} shouldn't be valid"
     end
   end
 
-  test "Product is not valid without a unique title - i18n" do
+  test "product is not valid without a unique title" do
     product = Product.new(
       title: products(:ruby).title,
-      description: "yyy",
+      description: "zyzzyx",
       price: 1,
       image_url: "fred.gif"
     )
     assert product.invalid?
-    assert_equal [I18n.translate('errors.messages.taken')],
-    product.errors[:title]
+    assert_equal [I18n.translate('errors.messages.taken')], product.errors[:title]
   end
-
-  def create
-    @product = Product.new(product_params)
-
-    respond_to do |format|
-      if @product.save
-        format.html {
-          redirect_to @product,
-          notice: "Product was successfully created."
-          }
-        format.json { 
-          render :show, status: :created,
-          location: @product
-          }
-      else
-        puts(@product.errors.full_messages)
-        format.html { render :new }
-        format.json { 
-          render json: @product.errors,
-          status: :unprocessable_entity     
-         }
-      end
-    end
-  end
-
 end
+
+
+

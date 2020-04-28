@@ -1,5 +1,5 @@
 current directory: /Users/ericmtodd/coding/replicant_program/rails/work/depot/vendor/bundle/ruby/2.6.0/gems/sqlite3-1.4.2/ext/sqlite3
-/Users/ericmtodd/.rbenv/versions/2.6.5/bin/ruby -I /Users/ericmtodd/.rbenv/versions/2.6.5/lib/ruby/2.6.0 -r ./siteconf20200420-12928-8so8zr.rb extconf.rb
+/Users/ericmtodd/.rbenv/versions/2.6.5/bin/ruby -I /Users/ericmtodd/.rbenv/versions/2.6.5/lib/ruby/2.6.0 -r ./siteconf20200423-70334-1b5i43y.rb extconf.rb
 checking for sqlite3.h... yes
 checking for pthread_create() in -lpthread... yes
 checking for -ldl... yes
@@ -60,4 +60,4 @@ linking shared-object sqlite3/sqlite3_native.bundle
 
 current directory: /Users/ericmtodd/coding/replicant_program/rails/work/depot/vendor/bundle/ruby/2.6.0/gems/sqlite3-1.4.2/ext/sqlite3
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 sqlite3_native.bundle ./.gem.20200420-12928-1mskpxn/sqlite3
+/usr/bin/install -c -m 0755 sqlite3_native.bundle ./.gem.20200423-70334-1d3p8v2/sqlite3

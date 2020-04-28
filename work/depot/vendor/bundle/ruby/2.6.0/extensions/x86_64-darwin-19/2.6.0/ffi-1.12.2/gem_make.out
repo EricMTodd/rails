@@ -1,5 +1,5 @@
 current directory: /Users/ericmtodd/coding/replicant_program/rails/work/depot/vendor/bundle/ruby/2.6.0/gems/ffi-1.12.2/ext/ffi_c
-/Users/ericmtodd/.rbenv/versions/2.6.5/bin/ruby -I /Users/ericmtodd/.rbenv/versions/2.6.5/lib/ruby/2.6.0 -r ./siteconf20200420-12928-1nmbku8.rb extconf.rb
+/Users/ericmtodd/.rbenv/versions/2.6.5/bin/ruby -I /Users/ericmtodd/.rbenv/versions/2.6.5/lib/ruby/2.6.0 -r ./siteconf20200423-70334-1rxp44o.rb extconf.rb
 checking for ffi.h... no
 checking for ffi.h in /usr/local/include,/usr/include/ffi... no
 checking for shlwapi.h... no
@@ -138,4 +138,4 @@ compiling Types.c
 compiling Variadic.c
 compiling ffi.c
 linking shared-object ffi_c.bundle
-/usr/bin/install -c -m 0755 ffi_c.bundle ./.gem.20200420-12928-1x2hy9h
+/usr/bin/install -c -m 0755 ffi_c.bundle ./.gem.20200423-70334-1iwu19c

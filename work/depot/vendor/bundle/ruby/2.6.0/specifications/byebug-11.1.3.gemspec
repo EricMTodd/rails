@@ -1,16 +1,16 @@
 # -*- encoding: utf-8 -*-
-# stub: byebug 11.1.2 ruby lib
+# stub: byebug 11.1.3 ruby lib
 # stub: ext/byebug/extconf.rb
 
 Gem::Specification.new do |s|
   s.name = "byebug".freeze
-  s.version = "11.1.2"
+  s.version = "11.1.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0".freeze) if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib".freeze]
   s.authors = ["David Rodriguez".freeze, "Kent Sibilev".freeze, "Mark Moseley".freeze]
   s.bindir = "exe".freeze
-  s.date = "2020-04-17"
+  s.date = "2020-04-23"
   s.description = "Byebug is a Ruby debugger. It's implemented using the\n    TracePoint C API for execution control and the Debug Inspector C API for\n    call stack navigation.  The core component provides support that front-ends\n    can build on. It provides breakpoint handling and bindings for stack frames\n    among other things and it comes with an easy to use command line interface.".freeze
   s.email = "deivid.rodriguez@riseup.net".freeze
   s.executables = ["byebug".freeze]
