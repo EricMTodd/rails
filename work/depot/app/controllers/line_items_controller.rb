@@ -58,10 +58,20 @@ class LineItemsController < ApplicationController
   # DELETE /line_items/1
   # DELETE /line_items/1.json
   def destroy
-    @line_item.destroy
-    respond_to do |format|
-      format.html { redirect_to store_index_url, notice: 'Line item was successfully destroyed.' }
-      format.json { head :no_content }
+    @line_item = LineItem.find(params[:id])
+    @line_item.update_attributes(quantity: @line_item.decrement_line_item)
+
+    if @line_item.quantity == 0
+      @line_item.destroy
+      respond_to do |format|
+        format.html { redirect_to store_index_url, notice: 'Product successfully removed from cart.' }
+        format.json { head :no_content }
+      end
+    else
+      respond_to do |format|
+        format.html { redirect_to store_index_url, notice: 'Product quantity updated.' }
+        format.json { head :no_content }
+      end
     end
   end
 
