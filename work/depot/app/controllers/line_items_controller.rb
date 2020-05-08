@@ -59,7 +59,7 @@ class LineItemsController < ApplicationController
   # DELETE /line_items/1.json
   def destroy
     @line_item = LineItem.find(params[:id])
-    @line_item.update_attributes(quantity: @line_item.decrement_line_item)
+    @line_item.update(quantity: @line_item.decrement_line_item)
 
     if @line_item.quantity == 0
       @line_item.destroy

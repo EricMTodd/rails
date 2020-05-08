@@ -46,4 +46,22 @@ class OrdersTest < ApplicationSystemTestCase
 
     assert_text "Order was successfully destroyed"
   end
+
+  test "check routing number" do
+    visit store_index_url
+
+    click_on 'Add to Cart', match: :first
+    
+    click_on 'Checkout'
+
+    fill_in 'order_name', with: 'Eric Todd'
+    fill_in 'order_address', with: '1228 North, 1270 West Provo UT, 84604'
+    fill_in 'order_email', with: 'ericmtodd@gmail.com'
+
+    assert_no_selector "#order_routing_number"
+
+    select 'Check', from: 'Pay Type'
+
+    assert_selector "#order_routing_number"
+  end
 end
