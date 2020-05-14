@@ -1,6 +1,7 @@
 # Add a new variable to the session to record how many times the user has accessed th store controller's index action.
 
 class StoreController < ApplicationController
+  skip_before_action :authorize
   include CurrentCart
   before_action :set_cart
   def index
