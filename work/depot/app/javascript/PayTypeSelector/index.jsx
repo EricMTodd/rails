@@ -26,16 +26,24 @@ class PayTypeSelector extends React.Component {
     return (
       <div>
         <div className="field">
-          <label htmlFor="order_pay_type">Pay Type</label>
+          <label htmlFor="order_pay_type">
+            {I18n.t("orders.form.pay_type")}
+          </label>
           <select
             id="order_pay_type"
             name="order[pay_type]"
             onChange={this.onPayTypeSelected}
           >
-            <option value="">Select a Payment Method</option>
-            <option value="Check">Check</option>
-            <option value="Credit Card">Credit Card</option>
-            <option value="Purchase Order">Purchase Order</option>
+            <option value="">{I18n.t("orders.form.pay_prompt_html")}</option>
+            <option value="Check">
+              {I18n.t("orders.form.pay_types.check")}
+            </option>
+            <option value="Credit Card">
+              {I18n.t("orders.form.pay_types.credit_card")}
+            </option>
+            <option value="Purchase Order">
+              {I18n.t("orders.form.pay_types.purhcase_order")}
+            </option>
           </select>
         </div>
         <PayTypeCustomComponent />
